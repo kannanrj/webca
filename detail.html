@@ -34,10 +34,53 @@
           $("#footer").load("footer.html"); 
         });
         </script> 
+        <!--for searching the elements-->
+        <script>
+        $(document).ready(function() {
+            // Add click event listener to subject names
+            $('h4').click(function() {
+              // Get the ID of the corresponding section
+              var sectionId = $(this).attr('id').replace('subject', 'section');
+              // Scroll to the section
+              $('html, body').animate({
+                scrollTop: $('#' + sectionId).offset().top
+              }, 1000);
+            });
+          });
+          </script>
+<!--smooth scrolling effect-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script>
+          $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+          
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+          
+                // Store hash
+                var hash = this.hash;
+          
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                }, 800, function(){
+          
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+                });
+              } // End if
+            });
+          });
+          </script>
 </head>
 <body>
     <div id="header"></div>
-
+    <!--smooth scrolling-->
+   
     <!-- Detail Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -47,13 +90,21 @@
                         <div class="section-title position-relative mb-5">
                             <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Course Detail</h6>
                             <h1 class="display-4">BCA courses syllabus</h1>
+                           <button><a href="#sem1"class="nav-link"><span data-hover="Resume">SEMESTER 1</span></a></button>
+                           <button><a href="#sem2" class="nav-link"><span data-hover="Resume">SEMESTER 2</span></a></button>
+                           <button><a href="#sem3" class="nav-link"><span data-hover="Resume">SEMESTER 3</span></a></button>
+                          <button> <a href="#sem4" class="nav-link"><span data-hover="Resume">SEMESTER 4</span></a></button>
+                           <button><a href="#sem5" class="nav-link"><span data-hover="Resume">SEMESTER 5</span></a></button>
+                          <button><a href="#sem6" class="nav-link"><span data-hover="Resume">SEMESTER 6</span></a></button>
                         </div>
+         <section id="sem1">
+            <div>
                         <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">BCA- SEMESTER I</h2><br>
                         <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">----------------</h2>
-                           <h4 style="color: #2878EB">CA1CRT01 : Computer Fundamentals and Digital Principles (Core) </h4> <br>
+                           <h4 id="subject1" style="color: #2878EB">CA1CRT01 : Computer Fundamentals and Digital Principles (Core) </h4> <br>
                             Theory:4 hrs. per week<br>
                             Credits:4<br>
-                            <h5>Unit-1:Introduction: Functional units of a computer system</h5>
+                            <h5 id="section1">Unit-1:Introduction: Functional units of a computer system</h5>
                             Introduction: Functional units of a computer system, Different types of computers, Computer Software
                             and Hardware, Types of software-System software and Application programme. Characteristic of
                             computers. Input Devices – Keyboard, Mouse, Optical input devices, Output devices – Monitors and
@@ -192,13 +243,395 @@ models, memory allocation functions. <br>
                         In addition there will be an essay question on a general topic.<br>
 
 
+                        <h4 style="color: #2878EB">CA1CRP01-Software Lab I (Core)   </h4>
 
-
+     </section>
 
                     </div>
 
                     </div>
+                    <section id="sem2">
+                    <div> 
+                        <br><br>
+   
+                        <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">BCA- SEMESTER 2 </h2><br>
+                        <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">----------------</h2>
+                        
+                        <h4 style="color: #2878EB">Database Management Systems (Core)</h4>
+                        <h5>Theory: 4 hrs. per week Credits: 3</h5>
+                        <h5>Unit 1: Introduction (12 hrs.)</h5>
+                        Characteristics of the Database Approach – Database users: DBA, Database Designers, End users – Advantages of using the DBMS Approach – Data models, Schemas, and Instances – Three-Schema Architecture and Data Independence.
+                        <br><br>
+                        DBMS Languages: DDL, DML – The Database System Environment: DBMS Component Modules.
+                        <br><br>
+                        <h5>Unit 2: Relational Model (16 hrs.)</h5>
+                        Entity Relationship Modeling: Introduction –Entity Types, Entity Sets, Attributes and Keys – Relationship Types, Relationship Sets, Roles, and Structural Constraints – Weak Entity Types – Notation for ER diagrams – Sample ER diagrams.
+                        <br><br>
+                        Relational Model concepts: Domains, Attributes, Tuples, and Relations – Characteristics of Relations – Relational Model Constraints and Relational Database Schemas: Domain Constraints, Key Constraints, Relational Database Schemas, Entity Integrity, Referential Integrity, and Foreign Keys.
+                        <br><br>
+                        <h5>Unit 3: SQL(14 hrs.)</h5>
+                        Data Types – Data Definition commands: CREATE, ALTER, DROP - Adding constraints in SQL – Basic SQL Queries: INSERT, SELECT, DELETE, UPDATE - Substring comparison using LIKE operator, BETWEEN operator – Ordering of rows – SQL set operations UNION, EXCEPT, INTERSECT – Complex Queries: Comparison involving NULL and Three-valued logic, Nested queries, EXISTS and UNIQUE functions, Renaming of attributes and Joining of tables, Aggregate functions, Grouping – Managing Views.
+                        <br><br>
+                        <h5>Unit 4: Normalization and Indexing Structures for Files(15 hrs.)</h5>
+                        Normalization: Informal Design Guidelines for Relational Schemas – Functional Dependencies – Normal forms: First Normal Form, Second Normal Form, Third Normal Form – General Definitions of Second and Third Normal Forms – BCNF.
+                        <br><br>
+                        Indexing Structures for files: -Types of Single-Level Ordered Indexes: Primary Indexes, Clustering Indexes, and Secondary Indexes.
+                        <br><br>
+                        <h5>Unit 5: Transaction Processing and Database Security (15 hrs.)</h5>
+                        Transaction Processing: Introduction to Transaction Processing - Transaction and System Concepts – Desirable properties of Transactions.
+                        <br><br>
+                        Database Security and Authorization: Types of Security – Control measures – Database Security and DBA – Access Control, User Accounts, and Database Audits – Access Control based on Granting and Revoking Privileges.
+                      </div>
+
+<br>
+                      <div>
+                        <h4 style="color: #2878EB">CA2CRT04: Computer Organization and Architecture (Core)</h4>
+                        <h5>Theory: 4 hrs. per week Credits: 3</h5>
+                        <h5>Unit 1: Basic Computer Organization and Design (12 hrs.)</h5>
+                        Operational concepts, instruction codes, computer registers, computer instructions, memory locations and addresses, instruction cycle, timing and control, bus organization.
+                        <br><br>
+                        <h5>Unit 2: Central Processing Unit (15 hrs.)</h5>
+                        General register organization, stack organization, addressing modes, instruction classification, program control.
+                        <br><br>
+                        <h5>Unit 3: Memory Organization (16 hrs.)</h5>
+                        Memory hierarchy, main memory, organization of RAM, SRAM, DRAM, Read-Only Memory (ROM), Programmable Read-Only Memory (PROM), Erasable Programmable Read-Only Memory (EPROM), Electrically Erasable Programmable Read-Only Memory (EEPROM), auxiliary memory, cache memory, virtual memory, memory mapping techniques.
+                        <br><br>
+                        <h5>Unit 4: Parallel Computer Structures (15 hrs.)</h5>
+                        Introduction to parallel processing, pipeline computers, multiprocessing systems, architectural classification scheme - SISD, SIMD, MISD, MIMD.
+                        <br><br>
+                        <h5>Unit 5: Pipelining and Vector Processing (14 hrs.)</h5>
+                        Introduction to pipelining, instruction and arithmetic pipelines (design), vector processing, array processors.
+                    </div>
+                    <br>
+                    <div>
+                        <h4 style="color: #2878EB">CA2CRT05: Object Oriented Programming using C++ (Core)</h4>
+                        <h5>Theory: 3 hrs. per week Credits: 4</h5>
+                        <h5>Unit 1: Basic Concepts of Object Oriented Programming (10 hrs.)</h5>
+                        Principles of Object Oriented Programming, Beginning with C++ 
+                        Procedure Oriented Programming-Object Oriented Programming-Basic concepts of object-oriented programming- Benefits of OOP- Applications of OOP-A simple C++program-Structure of C++ program-C++ data types- Symbolic constants- Reference by variables-Operators in C++- Operator precedence-Control structures- Function in C++ - The main function, Function prototyping- Call by reference- Return by reference- Inline function- Default arguments- Function overloading.
+                        <br><br>
+                        <h5>Unit 2: Classes and Objects (10 hrs.)</h5>
+                        Specifying a class- Defining member functions- Nesting of member functions -
+                        Private member functions - Arrays within a class - Memory allocation for objects-Static data members -
+                        Static member functions -Arrays of objects - objects as function arguments -Friendly functions- Returning Objects.
+                        <br><br>
+                        <h5>Unit 3: Constructors and Destructors, Overloading (12 hrs.)</h5>
+                        Constructors- Default constructor-Parameterized constructor-Copy constructor- Multiple constructors-Constructors with default arguments- Dynamic constructor-Destructors- Operator overloading- Unary and Binary operator overloading- Overloading using friends- Rules for overloading- Type conversion.
+                        <br><br>
+                        <h5>Unit 4: Inheritance (10 hrs.)</h5>
+                        Inheritance - Defining derived classes-Visibility modes-Single, Multilevel, Multiple, Hierarchical and Hybrid inheritance- Virtual base classes- Abstract classes- Constructors in derived classes- Nesting of classes.
+                        <br><br>
+                        <h5>Unit 5: Pointers, Virtual Functions and Polymorphism, Working with Files (12 hrs.)</h5>
+                        Pointers- Pointers to objects-this pointer-Pointers to derived classes- Virtual functions- Pure virtual functions- File Stream classes, Opening and closing a file- File opening modes- File pointers and their manipulations- Sequential input and output operations.
+                    </div>
+
+                    <div><br><br>
+                        <h4 style="color: #2878EB">DISCRETE MATHEMATICS II</h4>
+                        <h5>Theory: 3 hrs. per week Credits: 4</h5>
+                        <h5>Module 1: Graphs (18 hrs) </h5>
+                        Graphs and Graph Models, Graph Terminology and Special types of Graphs.Representing Graphs and Graph Isomorphism, Connectivity, Eulerand Hamilton Paths
+                        Text 1 Chapter 8 (Sections 8.1, 82, 83, 84 and 8:5 only)
+                        <br><br>
+                        <h5>Module 2: Trees</h5>
+                        Introduction to Trees Application of Trees. Tree Traversal, and Spanning Trees. Text Chapter 9 (Sections 91, 9.2. 93 and 94 only)
+                        <br><br>
+                        <h5>Module 3: Boolean Algebra</h5>
+                        Boolean Function, Representing Boolean Functions and Logic Gates
+                        Test Chapter 10 (Sections 10.1, 10.2 and 103 only)
+                        <br><br>
+                        <h5>Module 4: Matrices</h5>
+                        Definitions and examples of Symmetric. Skew-symmetric, Conjugate. Hermitian, Skew- hermitian tatrices. Rank of Matrix, Determination of rank by Row Canonical form and Normal form, Linear Equations, Solution of non homogenous equations using Augmented matrix and by Craners Rule. Homogenous Equations, Characteristic Equation. Characteristic roots and Characteristic vectors of matix, Cayley Hamilton theorem and applications.
+                        <br><br>
+                        <h4 style="color: #2878EB">CA2CRP02-Software Lab II (Core)</h4>
+                    </div>
+                    <br>
+    </section>
+    <section id="sem3">
+                    <div> 
+                    <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">BCA- SEMESTER III</h2> <br>
+                    <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">----------------</h2>
                     
+                         <br><br>
+                            <h4 style="color: #2878EB">CA3CRT06 - Computer Graphics (Core)</h4>
+                            <h5>Theory:4 hrs. per week Credits:4</h5>
+                            <h5>Unit 1 : (12 hrs. )</h5>
+                            Introduction: A survey of Computer Graphics, overview of graphics systems-Video display devicesRefresh CRT, Raster-Scan and Random-Scan Displays ,Color CRT Monitors, DVST, Flat-Panel Displays 
+                            , Raster Scan systems, Random scan systems, Input devices, Hard copy devices, Graphics software.
+                            <br><br>
+                            <h5>Unit 2: (14 hrs.)</h5>
+                            Output primitives: Line drawing algorithms: DDA algorithm, Bresenham’s line algorithm, Circle 
+                            generating algorithm- Midpoint circle algorithm, Character generation.
+                            <br><br>
+                            <h5>Unit 3: (18 hrs. )</h5>
+                            2D geometric Transformations: Basic transformations: Translation, Rotation, Scaling; Other 
+                            transformations-Reflection and shear, Matrix representation and homogenous coordinates, Composite 
+                            transformation, Interactive picture construction Techniques.<br>
+                            Two-dimensional viewing: viewing pipeline, window and viewport, window to viewport transformation. 
+                            Clipping operations- Point clipping, Line clipping:- Cohen Sutherland line clipping, Polygon clipping:-
+                            Sutherland- Hodgeman polygon clipping, Text Clipping.
+                            <br><br>
+                            <h5>Unit 4: (14 hrs. )</h5>
+                            Three-dimensional concepts: Three dimensional display methods, Three dimensional object 
+                            representations- Polygon surfaces, Sweep representations, Constructive solid geometry methods, octrees 
+                            and quadtrees.
+                            
+                            <br><br><h5>Unit 5 (14 Hrs)</h5>
+                            Computer Animation: Design of animation sequences, raster animations, computer animation 
+                            languages, key-frame systems, morphing, motion specifications.
+                            
+                            <br><br>
+                        
+                    </div>
+                    <div> 
+                        <br><br>
+                           <h4 style="color: #2878EB">CA3CRT07 -Microprocessors and PC Hardware (Core)</h4>
+                           <h5> Theory:3 hrs. per week Credits:3</h5>
+                           <h5>Unit1: (10 hrs.)</h5>
+                           Introduction : Evolution of microprocessors. Introduction to the concept of 8085 
+                            microprocessor: Intel 8085 introduction, Architecture ,Pin diagram, Instruction cycle, Timing 
+                            diagrams, Interrupts of Intel 8085.
+                           <br><br>
+                           <h5>Unit 2 : (10 hrs.) </h5>
+                           Instruction Set of Intel 8085 : Introduction, Instruction and data format, Addressing modes, Status 
+                           flags, Intel 8085 instruction set.
+                           <br><br>
+                           <h5>Unit3: (12 hrs. )</h5>
+                           Motherboard : Components of motherboard — expansion slots, Processor socket, coprocessor, 
+                           memory modules, BIOS and CMOS, chipset. Super I/O chip, ROM BIOS, System buses- Processor 
+                           Buses, Memory buses, I/O Bus(ISA,PCI Local Bus, AGP, USB), Motherboard selection criteria.
+                           <br><br>
+                           <h5>Unit4: (10 hrs.) </h5>
+                           Hard disk: Hard Disk drive, Definitions, Hard Disk operations, Disk formatting, Basic hard disk 
+                            drive components, Hard disk features, Hard disk drive installation procedure, FAT Disk, VFAT, FAT 
+                            32, NTFS
+                           
+                           <br><br><h5>Unit5: (12 hrs. )</h5>
+                           Types of memory: Physical Memory, Memory modules:- SIMMs, DIMMs, RIMMs, Brief study of 
+                            conventional base memory, Upper memory area, High memory area, Extended memory, Expanded 
+                            memory
+                           
+                           <br><br>
+                       
+                   </div>
+                   <div> 
+                    <br><br>
+                       <h4 style="color: #2878EB">CA3CRT08 - Operating Systems (Core) </h4>
+                       <h5> Theory:4 hrs. per week Credits:4</h5>
+                       <h5>Unit1: (10 hrs.)</h5>
+                       Introduction: OS Definition, Functions, Evolution of OS,OS Structure Operating System Operations, 
+                       Operating System Services, User Operating System Interface, System Calls, Types of System Calls.
+                       <br><br>
+                       <h5>Unit 2: (14 hrs.)</h5>
+                       Process: Basic Concepts, Process Scheduling, Operations on Processes, Inter process communication, 
+                        Process Scheduling - Scheduling Criteria, Scheduling Algorithms, Multiple Processor Scheduling.
+
+                       <br><br>
+                       <h5>Unit 3: (18 hrs. )</h5>
+                       Process Coordination: Synchronization - The Critical Section problem, Semaphores, Classic Problems 
+                       of Synchronization, Monitors. Deadlocks: System Model, Deadlock Characterization, Methods 
+                       of handling Deadlocks, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, Recovery from 
+                       Deadlock
+                       <br><br>
+                       <h5>Unit 4: (16 hrs. ) </h5>
+                       Memory Management: Memory Management Strategies - Swapping, Contiguous memory allocation, 
+                        Paging, Segmentation. Virtual Memory Management- Demand paging, Page Replacement
+                       
+                       <br><br><h5>Unit 5: (14 hrs. )</h5>
+                       Storage Management: File System: - File Concept, Access Methods, Directory structure. Implementing 
+                        File Systems:-File System Structure, Allocation Methods, Free Space Management, Disk Scheduling.
+                       
+                       <br><br>
+                   
+               </div>
+               <div> 
+                <br><br>
+                   <h4 style="color: #2878EB">CA3CRT09 - Data Structures using C++  </h4>
+                   <h5> Theory:4 hrs. per week Credits:3
+                    </h5>
+                   <h5>Unit 1 (12 hrs. )</h5>
+                   Concept of Structured data - Data structure definition, Different types and classification of data structures, 
+                   Arrays – Memory allocation and implementation of arrays in memory, array operations, Applications -
+                  sparse matrix representation and operations, polynomials representation and addition, Concept of search 
+                  and sort – linear search, binary search, selection sort, insertion sort, quick sort.
+                   <br><br>
+                   <h5>Unit 2 (12 hrs.)</h5>
+                   Stacks – Concepts, organization and operations on stacks using arrays (static), examples, Applications - 
+                   Conversion of infix to postfix and infix to prefix, postfix evaluation, subprogram calls and execution, 
+                   Multiple stacks representation.
+                   Queues - Concepts, organization and operations on queues, examples. 
+                    Circular queue – limitations of linear queue, organization and operations on circular queue. Double ended 
+                    queue, Priority queue. 
+
+                   <br><br>
+                   <h5>Unit 3 (18 hrs.) </h5>
+                   Linked list: Concept of dynamic data structures, linked list, types of linked list, linked list using pointers, 
+                   insertion and deletion examples, circular linked list, doubly linked lists
+                   Applications- linked stacks and queues, memory management basic concepts, garbage collection.
+                   <br><br>
+                   <h5>Unit 4 (15 hrs) </h5>
+                   Trees - Concept of recursion, trees, tree terminology, binary trees, representation of binary trees, strictly 
+                   binary trees, complete binary tree, extended binary trees, creation and operations on binary tree, binary 
+                   search trees, Creation of binary search tree, tree traversing methods – examples, binary tree representation 
+                   of expressions.
+                   
+                   <br><br><h5>Unit 5: (15 hrs. )</h5>
+                   File - Definition, Operations on file (sequential), File organizations - sequential, Indexed sequential, 
+                    random files, linked organization, inverted files, cellular partitioning, hashing – hash tables, hashing 
+                    functions, collisions, collision resolving methods.
+
+                   
+                   <br><br>
+                   <h4 style="color: #2878EB">CA3CRP03-Software Lab III (Core) </h4>
+               
+           </div>
+ </section>
+<section id="sem4">
+    <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">BCA- SEMESTER IV</h2><br>
+    <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">----------------</h2>
+    <div> 
+        <br><br>
+        <h4 style="color: #2878EB">CA4CRT10 - Design and Analysis of Algorithms (Core)</h4>
+        <h5>Theory:4 hrs. per week Credits:4</h5>
+        <h5>Unit 1: (12 hrs.)</h5>
+        Introduction, Definition of Algorithm, Algorithm design techniques, Algorithm Analysis, performance 
+        analysis - space complexity, time complexity, Best, Worst, And average case complexity.
+        <br><br>
+        <h5>Unit 2: (14 hrs.)</h5>
+        Divide and Conquer General method, Binary search, finding the maximum and minimum, merge sort, 
+        quick sort, performance measurement of quick sort, Selection, Strassen’s matrix multiplication.
+        <br><br>
+        <h5>Unit 3: (18 hrs.)</h5>
+        Greedy Algorithm General Characteristics of greedy algorithms, Problem solving using Greedy 
+        Algorithm - Knapsack problem, Minimum Spanning trees (Kruskal’s algorithm, Prim’s algorithm).
+        <br><br>
+        <h5>Unit 4: (16 hrs.)</h5>
+        Dynamic programming The general method, multistage graphs, all-pairs shortest path, Single source 
+        shortest path, 0/1 Knapsack problem, Traveling Sales person problem.
+        <br><br>
+        <h5>Unit 5: (12 hrs)</h5>
+        Basic traversal and search techniques - BFS and traversal, DFS and traversal, Bi-connected components 
+        and DFS, Backtracking General method, 8-queens problem, Sum of subsets problem, Graph coloring, 
+        Hamiltonian cycles
+        <br><br>
+    </div>
+
+    <div>
+        <br><br>
+        <h4 style="color: #2878EB">CA4CRT11 - System Analysis & Software Engineering (Core)</h4>
+        <h5>Theory: 4 hrs. per week Credits: 4</h5>
+        <h5>Unit 1: (12 hrs.)</h5>
+        Information systems concepts, Business information systems; Describing the business organization –
+        organization chart, organization function list; information system levels - operational, lower, middle, top 
+        management; SDLC Life cycle activities- life cycle flow chart, task, management review, baseline 
+        specifications, role of system analyst.
+        <br><br>
+        <h5>Unit 2: (14 hrs.)</h5>
+        Introduction to Software Engineering - Definition, Program Vs Software, and Software process, Software
+        Characteristics, Brief introduction about product and process, Software process and product matrices. 
+        Software life cycle models, Definition, Waterfall model, Increment process models- Iterative, RAD, 
+        Evolutionary process models-Prototyping, Spiral. Selection of a life cycle model.
+        <br><br>
+        <h5>Unit 3: (18 hrs.)</h5>
+        Software Requirement Analysis and Specification Requirements Engineering type of requirements, 
+        Feasibility Studies, Requirement Elicitation – Use Case, DFD, Data Dictionaries, Various steps for 
+        requirement analysis, Requirement documentation, Requirement validation, an example to illustrate the 
+        various stages in Requirement analysis. Project planning-Size estimation, cost estimation, the constructive 
+        cost model (COCOMO).
+        <br><br>
+        <h5>Unit 4: (14 hrs.)</h5>
+        Software Design - Definition, Various types, Objectives and importance of Design phase, Modularity, 
+        Strategy of design, Function oriented design, IEEE recommended practice for software design 
+        descriptions. Steps to Analyze and Design Objected Oriented System. Software Reliability Definition, 
+        McCall software quality model, Capability Maturity Model.
+        <br><br>
+        <h5>Unit 5: (14 hrs.)</h5>
+        Software Testing : What is testing?, Test, Test case and Test Suit, Verification and Validation, Alpha, 
+        beta and acceptance testing, functional testing, techniques to design test cases, boundary value analysis, 
+        Equivalence class testing, decision table based testing, cause-effect graphing technique, Structural testing 
+        path testing, Graph matrices, Data flow testing; Levels of testing Unit testing, integration testing, system 
+        testing, validation testing
+        <br><br>
+      </div>
+      
+
+      <div>
+        <br><br>
+        <h4 style="color: #2878EB">CA4CRT12 - Linux Administration (Core)</h4>
+        <h5>Theory: 4 hrs. per week Credits: 4</h5>
+        <h5>Unit 1: (12 hrs.)</h5>
+        Overview of Linux: What is Linux, Linux's roots in Unix, Common Linux features, advantages of Linux, 
+        Overview of Unix and Linux architectures, Linux file system, hardware requirements for Linux, Linux 
+        standard directories. Commands for files and directories: cd, ls, cp, rm, mkdir, rmdir, pwd, file, more, 
+        less, Creating and viewing files using cat, file comparisons.
+        <br><br>
+        <h5>Unit 2: (15 hrs.)</h5>
+        Essential Linux commands: Processes in Linux, process fundamentals, connecting processes with pipes, 
+        redirecting input/output, Background processing, managing multiple processes, process scheduling - (at, 
+        batch), nohup command, kill, ps, who, find, sort, touch, file, file processing commands - wc, cut, paste 
+        etc Mathematical commands - expr, factor etc. Creating and editing files with vi editor.
+        <br><br>
+        <h5>Unit 3: (15 hrs.)</h5>
+        Shell programming - Basics of shell programming, various types of shell available in Linux, comparisons 
+        between various shells, shell programming in bash. Conditional and looping statements, case statement, 
+        parameter passing and arguments, Shell variables, system shell variables, shell keywords, Creating 
+        Shell programs for automating system tasks.
+        <br><br>
+        <h5>Unit 4: (18 hrs.)</h5>
+        System administration - Common administrative tasks, identifying administrative files configuration 
+        and log files, Role of system administrator, Managing user accounts-adding & deleting users, changing 
+        permissions and ownerships, Creating and managing groups, modifying group attributes, Temporary 
+        disabling of users accounts, creating and mounting file system, checking and monitoring system 
+        performance - file security & Permissions, becoming super user using su. Getting system information 
+        with uname, host name, disk partitions & sizes, users, kernel, installing and removing packages with rpm 
+        command.
+        <br><br>
+        <h5>Unit 5: (12 hrs.)</h5>
+        Simple filter commands: pr, head, tail, cut, sort, uniq, tr - Filter using regular expression grep, egrep, 
+        sed. Understanding various Servers: DHCP, DNS, Squid, Apache, Telnet, FTP, Samba.
+        <br><br>
+      </div>
+
+      <div>
+        <br><br>
+        <h4 style="color: #2878EB">CA4CRT13 - Web Programming Using PHP</h4>
+        <h5>Theory: 3 hrs. per week Credits: 3</h5>
+        <h5>Unit 1: (8 hrs.)</h5>
+        Introduction to web, WWW architecture, Fundamentals of HTML, text formatting tags, marquee, 
+        inserting images, links, lists, creating tables, frames, working with form elements.
+        <br><br>
+        <h5>Unit 2: (10 hrs.)</h5>
+        CSS introduction, &lt;link&gt; and &lt;style&gt; elements, CSS properties, Controlling Fonts, Text formatting, 
+        Text- pseudo classes, Selectors, Links, Backgrounds, lists
+        Introduction to JavaScript, JavaScript variables, operators, decision control statements, looping, 
+        functions, arrays, events, popup boxes-alert, prompt, confirm box, built-in objects, writing JavaScript, 
+        form validation.
+        <br><br>
+        <h5>Unit 3: (10 hrs.)</h5>
+        Introduction to PHP, server-side scripting, role of web server software, PHP comments, variables, echo and 
+        print, PHP operators, data types, branching statements, loops, arrays.
+        <br><br>
+        <h5>Unit 4: (12 hrs.)</h5>
+        PHP functions, PHP form, Passing information between pages, $_GET, $_POST, $_REQUEST. String 
+        functions, include and require, session and cookie management, error handling in PHP, Object-Oriented 
+        Programming using PHP.
+        <br><br>
+        <h5>Unit 5: (14 hrs.)</h5>
+        Introduction to MySQL, datatypes, SQL commands - CREATE, UPDATE, INSERT, DELETE, SELECT, 
+        PHP functions for MySQL connectivity and operation - mysql_connect, mysql_select_db, mysql_query, 
+        mysql_fetch_row, mysql_fetch_array, mysql_result, mysql_list_fields, mysql_num_fields, insertion, 
+        updation and deletion of data using PHP, displaying data from MySQL in webpage.
+        <br><br>
+        <h4 style="color: #2878EB"> CA4CRP04 - Software Lab IV (Core)</h4>
+      </div>
+      <section id="sem5">
+        <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">BCA- SEMESTER V</h2><br>
+        <h2 class="d-inline-block position-relative text-secondary text-uppercase pb-2">----------------</h2>
+        
+      </section>
+
+
+ 
+           <main>          
                     <!--card start-->
                 <div class="col-lg-4 mt-5 mt-lg-0">
                     <div class="bg-primary mb-5 py-3">
